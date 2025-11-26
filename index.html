@@ -5,38 +5,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
+      @font-face {
+        font-family: "Outfit";
+        src: url("assets/fonts/Outfit.ttf") format("truetype");
+        font-weight: 100 900;
+        font-stretch: 75% 125%;
+        font-style: normal;
+      }
+
       /* For variable decalaration which will create a couple of tailwind css*/
       @theme {
         --color-mint-500: oklch(0.72 0.11 178);
+        --font-family-sans: "Outfit", sans-serif;
+        --color-main: #95b1bd;
       }
-      /* Defining own utility class, one @utility for each */
-      @utility asdf {
-        color: white;
+
+      /* Defining own utility class, one @utility for each. THIS ONLY EXISTS FOR CDN TAILWIND!! */
+      @utility shadow-default {
+        box-shadow: 5px 5px 0px 2px var(--color-main);
       }
+
+      /* To set styling for default elements like <p>, <h1> etc. */
+      @layer base {
+        h2 {
+          @apply text-center font-thin text-5xl mb-10;
+        }
+        body {
+          @apply md:text-lg;
+        }
+      }
+
       /* Components which apply multiple DEFINED tailwind classes */
       @layer components {
         .btn {
           @apply bg-mint-500 px-4 py-3 text-center text-sm font-semibold inline-block text-white cursor-pointer uppercase transition duration-200 ease-in-out rounded-md hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95;
         }
         .card {
-          @apply p-4 shadow-md text-mint-500 cursor-pointer inline-block asdf;
+          @apply p-6 shadow-default inline-block border;
         }
         .container {
-          @apply max-w-300 m-auto;
+          @apply max-w-300 m-auto p-5;
+        }
+        .subheading {
+          @apply text-center mb-10 -mt-8 text-xl;
         }
       }
     </style>
     <title>Tailwind Group Project</title>
   </head>
-  <body>
+  <body class="font-family-sans">
+    <!-- ICON LIBRARY -->
+    <svg style="display: none">
+      <symbol id="icon-star">
+        <path
+          d="M9.07088 0.612343C9.41462 -0.204115 10.5854 -0.204114 10.9291 0.612346L12.9579 5.43123C13.1029 5.77543 13.4306 6.01061 13.8067 6.0404L19.0727 6.45748C19.9649 6.52814 20.3267 7.62813 19.6469 8.2034L15.6348 11.5987C15.3482 11.8412 15.223 12.2218 15.3106 12.5843L16.5363 17.661C16.744 18.5211 15.7969 19.201 15.033 18.7401L10.5245 16.0196C10.2025 15.8252 9.7975 15.8252 9.47548 16.0196L4.96699 18.7401C4.20311 19.201 3.25596 18.5211 3.46363 17.661L4.68942 12.5843C4.77698 12.2218 4.65182 11.8412 4.36526 11.5987L0.353062 8.2034C-0.326718 7.62813 0.0350679 6.52814 0.927291 6.45748L6.19336 6.0404C6.5695 6.01061 6.89716 5.77543 7.04207 5.43123L9.07088 0.612343Z"
+        />
+      </symbol>
+    </svg>
+
     <header>
-      <div class="container">asdf</div>
+      <div class="container">header</div>
     </header>
     <main>
-      <h1 class="text-3xl font-bold underline">Hello world</h1>
-      <div class="card">I'm a card</div>
-      <div class="btn">Button</div>
-      <div class="card">I'm a card</div>
+      <section class="container" id="testimonials">
+        <h2>Real readers</h2>
+        <p class="subheading">
+          Hear what people are saying about BookShare Connect.
+        </p>
+        <div class="flex flex-wrap lg:flex-nowrap gap-6">
+          <div class="card">
+            <div class="flex gap-0.5 mb-2">
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+            </div>
+            <p class="mb-5">
+              "I found three books I'd been searching for and made friends who
+              love the same authors. It's changed how I read."
+            </p>
+            <div class="flex">
+              <img
+                class="rounded-full w-20 mb-2"
+                src="assets/imgs/testimonial1.jpg"
+                alt=""
+              />
+              <div class="ml-4">
+                <div class="font-bold">Sarah Mitchell</div>
+                <div class="">Reader, Portland</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="flex gap-0.5 mb-2">
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+            </div>
+            <p class="mb-5">
+              "I traded five books last month and found two I'd been hunting for
+              years. The app made it simple, and the people were genuine."
+            </p>
+            <div class="flex">
+              <img
+                class="rounded-full w-20 mb-2"
+                src="assets/imgs/testimonial3.jpg"
+                alt=""
+              />
+              <div class="ml-4">
+                <div class="font-bold">Marcus Chen</div>
+                <div class="">Reader, Seattle</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="flex gap-0.5 mb-2">
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+              <svg width="20" height="19" fill="gold">
+                <use href="#icon-star"></use>
+              </svg>
+            </div>
+            <p class="mb-5">
+              "No more books gathering dust. I list what I've finished, get what
+              I want next, and my wallet stays full. That's the deal."
+            </p>
+            <div class="flex">
+              <img
+                class="rounded-full w-20 mb-2"
+                src="assets/imgs/testimonial2.jpg"
+                alt=""
+              />
+              <div class="ml-4">
+                <div class="font-bold">Elena Rodriguez</div>
+                <div class="">Collector, Austin</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
   </body>
