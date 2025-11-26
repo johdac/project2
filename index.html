@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      /* For variable decalaration which will create a couple of tailwind css*/
+      @theme {
+        --color-mint-500: oklch(0.72 0.11 178);
+      }
+      /* Defining own utility class, one @utility for each */
+      @utility asdf {
+        color: white;
+      }
+      /* Components which apply multiple DEFINED tailwind classes */
+      @layer components {
+        .btn {
+          @apply bg-mint-500 px-4 py-3 text-center text-sm font-semibold inline-block text-white cursor-pointer uppercase transition duration-200 ease-in-out rounded-md hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95;
+        }
+        .card {
+          @apply p-4 shadow-md text-mint-500 cursor-pointer inline-block asdf;
+        }
+      }
+    </style>
+    <title>Tailwind Group Project</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1 class="text-3xl font-bold underline">Hello world!</h1>
+      <div class="card">I'm a card</div>
+      <div class="btn">Button</div>
+      <div class="card">I'm a card</div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
