@@ -30,10 +30,10 @@
           @apply text-center font-thin text-5xl mb-10;
         }
         h3 {
-          @apply text-2xl py-3;
+          @apply text-3xl py-3;
         }
         h4 {
-          @apply py-2 text-base;
+          @apply py-2 text-lg text-blue-900;
         }
         p {
           @apply pb-3;
@@ -63,17 +63,20 @@
         .card-box {
           @apply flex flex-wrap md:flex-row lg:flex-nowrap items-center justify-center;
         }
-        .card-box-sub {
+        .card-box-sub1 {
+          @apply flex flex-col gap-3 border-1 h-full w-full;
+        }
+        .card-box-sub2 {
           @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 items-center justify-center p-4 gap-2.5;
         }
         .card-toshare {
-          @apply items-center border-1 h-50 w-48 p-4;
+          @apply h-full w-full items-center border-1 p-4;
         }
         .icon-toshare {
           @apply w-6;
         }
         .a-toshare {
-          @apply text-xs hover:bg-gray-300;
+          @apply text-base hover:bg-gray-300;
         }
       }
     </style>
@@ -97,8 +100,8 @@
         <p class="subheading">
           Connect with readers in your area and start trading today.
         </p>
-        <div class="card-box">
-          <div class="flex flex-col gap-3 border-1">
+        <div class="container card-box">
+          <div class="card-box-sub1">
             <div class="px-5 py-3">
               <p>Share</p>
               <h3>List your books in seconds</h3>
@@ -109,10 +112,10 @@
               <a class="a-toshare px-2" href="#"> Trade with real people > </a>
             </div>
             <div>
-              <img src="assets/imgs/books.jpg" class="object-cover w-90" />
+              <img src="assets/imgs/books.jpg" />
             </div>
           </div>
-          <div class="card-box-sub">
+          <div class="container card-box-sub2">
             <article class="card-toshare">
               <img class="icon-toshare" src="assets/imgs/globe.png" />
               <h4>
