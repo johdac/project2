@@ -36,15 +36,27 @@
         h2 {
           @apply text-center font-thin text-5xl mb-10;
         }
+        h3 {
+          @apply text-2xl py-3;
+        }
+        h4 {
+          @apply py-2 text-base;
+        }
+        p {
+          @apply pb-3;
+        }
         body {
           @apply md:text-lg;
+        }
+        li {
+          @apply text-xs p-1 relative pl-6 before:content-['✓'] before:absolute before:left-0;
         }
       }
 
       /* Components which apply multiple DEFINED tailwind classes */
       @layer components {
         .btn {
-          @apply px-4 py-3 text-center text-sm font-semibold inline-block text-white cursor-pointer uppercase transition duration-200 ease-in-out rounded-md hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95;
+          @apply px-4 py-2 text-center text-sm font-semibold inline-block bg-emerald-600 text-white cursor-pointer uppercase transition duration-200 ease-in-out rounded-md hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95;
         }
         .card {
           @apply p-6 shadow-default inline-block border;
@@ -54,6 +66,21 @@
         }
         .subheading {
           @apply text-center mb-10 -mt-8 text-xl;
+        }
+        .card-box {
+          @apply flex flex-wrap md:flex-row lg:flex-nowrap items-center justify-center;
+        }
+        .card-box-sub {
+          @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 items-center justify-center p-4 gap-2.5;
+        }
+        .card-toshare {
+          @apply items-center border-1 h-50 w-48 p-4;
+        }
+        .icon-toshare {
+          @apply w-6;
+        }
+        .a-toshare {
+          @apply text-xs hover:bg-gray-300;
         }
       }
     </style>
@@ -68,7 +95,6 @@
         />
       </symbol>
     </svg>
-
     <header>
       <div class="flex flex-row justify-between">
         <div class="font-[Sofia] text-2xl text-red-300 mx-4">Logo</div>
@@ -82,6 +108,72 @@
       </div>
     </header>
     <main>
+      <section class="container" id="toshare">
+        <h2>Everything you need to share</h2>
+        <p class="subheading">
+          Connect with readers in your area and start trading today.
+        </p>
+        <div class="card-box">
+          <div class="flex flex-col gap-3 border-1">
+            <div class="px-5 py-3">
+              <p>Share</p>
+              <h3>List your books in seconds</h3>
+              <p>
+                Upload photos and details. Your library goes live instantly.
+              </p>
+              <button class="btn">Explore</button>
+              <a class="a-toshare px-2" href="#"> Trade with real people > </a>
+            </div>
+            <div>
+              <img src="assets/imgs/books.jpg" class="object-cover w-90" />
+            </div>
+          </div>
+          <div class="card-box-sub">
+            <article class="card-toshare">
+              <img class="icon-toshare" src="assets/imgs/globe.png" />
+              <h4>
+                Browse what others are sharing. Find your next great read.
+              </h4>
+              <p>connect</p>
+              <a class="a-toshare" href="#"> Share > </a>
+            </article>
+            <article class="card-toshare">
+              <img class="icon-toshare" src="assets/imgs/compass.png" />
+              <h4>Explore</h4>
+              <p>connect</p>
+              <a class="a-toshare" href="#"> Discover > </a>
+            </article>
+            <article class="card-toshare">
+              <img class="icon-toshare" src="assets/imgs/document.png" />
+              <h4>Post your books in one minute.</h4>
+              <p>Add photos, titles, and what you want. Done.</p>
+              <a class="a-toshare" href="#"> Browse > </a>
+            </article>
+            <article class="card-toshare">
+              <img class="icon-toshare" src="assets/imgs/navigation.png" />
+              <h4>Find books readers near you are offering.</h4>
+              <p>Search by genre, author, or what's trending locally.</p>
+              <a class="a-toshare" href="#"> Connect > </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="container card-box">
+        <div class="p-4">
+          <h3>Most Read Book in the world of 2025</h3>
+          <p>
+            The most-read books of 2025 include Onyx Storm by Rebecca Yarros,
+            Sunrise on the Reaping by Suzanne Collins, and The Let Them Theory
+            by Mel Robbins, based on sales and user data from sources like
+            Circana and Goodreads.
+          </p>
+          <button class="btn">Detail</button>
+          <button class="btn">Book</button>
+        </div>
+        <div>
+          <img src="assets/imgs/top_books.png" />
+        </div>
+      </section>
       <section class="container" id="testimonials">
         <h2>Real readers</h2>
         <p class="subheading">
@@ -188,6 +280,53 @@
                 <div class="font-bold">Elena Rodriguez</div>
                 <div class="">Collector, Austin</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container" id="pricing">
+        <p class="text-center">Plans</p>
+        <h2>Pricing</h2>
+        <p class="subheading">
+          Choose what works for you and start sharing books today.
+        </p>
+        <div class="card-box gap-4">
+          <div class="flex flex-col border p-4 w-80 lg:max-w-full">
+            <div class="h-20 border-b">
+              <h3>Basic</h3>
+              <p>For causual readers</p>
+            </div>
+            <div class="h-35 border-b">
+              <h3>Free</h3>
+              <p>Forever free</p>
+              <button class="btn w-full">Get started</button>
+            </div>
+            <div class="h-30 pt-2">
+              <ul>
+                <li>List up to 10 books</li>
+                <li>Local trading only</li>
+                <li>Basic messaging</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col border p-4 w-80">
+            <div class="h-20 border-b">
+              <h3>Premium</h3>
+              <p>For serious collectors</p>
+            </div>
+            <div class="h-35 border-b">
+              <h3>9,99<span class="text-base">/month</span></h3>
+              <p>or 99/year</p>
+              <button class="btn w-full">Get started</button>
+            </div>
+            <div class="h-30 pt-2">
+              <ul>
+                <li>unlimited listings</li>
+                <li>Regional trading</li>
+                <li>Priority support</li>
+                <li>Reading analytics</li>
+                <li>Wishlist features</li>
+              </ul>
             </div>
           </div>
         </div>
