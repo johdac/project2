@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sofia&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+      defer
+    ></script>
     <style type="text/tailwindcss">
       @font-face {
         font-family: "Outfit";
@@ -63,7 +70,16 @@
     </svg>
 
     <header>
-      <div class="container">header</div>
+      <div class="flex flex-row justify-between">
+        <div class="font-[Sofia] text-2xl text-red-300 mx-4">Logo</div>
+        <nav>
+          <ul class="flex justify-around mx-4 cursor-pointer space-x-4">
+            <li><a href="">Explore</a></li>
+            <li><a href="">Community</a></li>
+            <li><a href="">Resources</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="container" id="testimonials">
