@@ -86,7 +86,7 @@
         {
           @apply flex flex-col justify-items-end items-center space-x-2 mt-4 px-2 py-2 text-center text-sm font-normal bg-black text-white cursor-pointer duration-200 ease-in-out hover:bg-indigo-700 focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95;
         }
-       
+        
       }
     </style>
     <title>Tailwind Group Project</title>
@@ -104,16 +104,16 @@
       <div class="container flex flex-row justify-between">
         <div class="font-[Sofia] text-2xl text-red-300 mx-4">Logo</div>
         <nav>
-          <ul class="flex justify-around mx-4 cursor-pointer space-x-4">
-            <li><a href="">Explore</a></li>
-            <li><a href="">Community</a></li>
-            <li><a href="">Resources</a></li>
-          </ul>
+          <div class="flex justify-around mx-4 cursor-pointer space-x-4">
+            <div><a href="">Explore</a></div>
+            <div><a href="">Community</a></div>
+            <div><a href="">Resources</a></div>
+            </div>
         </nav>
       </div>
     </header>
     <main>
-      <section class="container flex flex-row p-6 gap-4" id="hero">
+      <section class="container flex flex-row p-6 gap-4">
           <div class = "flex flex-col me-8">
           <h2 class ="py-5 text-left text-wrap me-8">Share books,find readers, build community</h2>
           <p class=" text-left text-wrap mt-60 ">
@@ -364,6 +364,15 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <section class = "container">
+        <div class = "flex flex-col justify-between p-6">
+          <div>Logo</div>
+          <div>Product</div>
+          <div>About</div>
+          <div>Facebook</div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
