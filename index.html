@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sofia&display=swap"
-      rel="stylesheet"
-    />
     <script
       src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
       defer
@@ -48,6 +44,9 @@
         body {
           @apply md:text-lg;
         }
+        section {
+          @apply mb-10 md:mb-25;
+        }
       }
 
       /* Components which apply multiple DEFINED tailwind classes */
@@ -64,39 +63,21 @@
         .subheading {
           @apply text-center mb-10 -mt-8 text-xl;
         }
-        .card-box {
-          @apply flex flex-wrap gap-3 md:flex-row lg:flex-nowrap items-center justify-center;
-        }
-        .card-box-sub1 {
-          @apply w-full h-full flex flex-col gap-3 border-1;
-        }
-        .card-box-sub2 {
-          @apply w-full h-full gap-3.5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 items-center justify-center;
-        }
-        .card-toshare {
-          @apply h-full w-full items-center border-1 p-4;
-        }
-
         .a-toshare {
           @apply text-base hover:text-gray-400;
         }
-
+        .card-toshare {
+          @apply flex-grow basis-1/2 border-1 p-4;
+        }
         #pricing li {
           @apply text-lg p-1 relative pl-6 before:content-['✓'] before:absolute before:left-0;
         }
-
         .card-pricing {
-          @apply flex-1 flex-col border p-8;
+          @apply flex-1 flex-col border p-8 basis-full md:basis-auto;
         }
-
-        #pricing .card-box-sub1 {
-          @apply md:flex-row border-none;
-        }
-        .button
-        {
+        .button {
           @apply flex flex-col justify-items-end items-center space-x-2 mt-4 px-2 py-2 text-center text-sm font-normal bg-black text-white cursor-pointer duration-200 ease-in-out hover:bg-indigo-700 focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95;
         }
-        
       }
     </style>
     <title>Tailwind Group Project</title>
@@ -132,280 +113,299 @@
     </svg>
     <header>
       <div class="container flex flex-row justify-between">
-        <div class="font-[Sofia] text-2xl text-red-300 mx-4">Logo</div>
+        <div class="w-40"><img src="assets/imgs/logo.jpg" alt="" /></div>
         <nav>
           <div class="flex justify-around mx-4 cursor-pointer space-x-4">
             <div><a href="">Explore</a></div>
             <div><a href="">Community</a></div>
             <div><a href="">Resources</a></div>
-            </div>
+          </div>
         </nav>
       </div>
     </header>
     <main>
-      <section class="container flex flex-row p-6 gap-4">
-          <div class = "flex flex-col me-8">
-          <h2 class ="py-5 text-left text-wrap me-8">Share books,find readers, build community</h2>
-          <p class=" text-left text-wrap mt-60 ">
-            BookShare Connects brings readers together. Trade books with
-            neighbors, discover what others love, and grow your library without
-            the cost
-          </p>
+      <section id="hero">
+        <div class="container flex flex-row p-6 gap-4">
+          <div class="flex flex-col me-8">
+            <h2 class="py-5 text-left text-wrap me-8">
+              Share books, find readers, build a community
+            </h2>
+            <p class="text-left text-wrap mt-10">
+              BookShare Connects brings readers together. Trade books with
+              neighbors, discover what others love, and grow your library
+              without the cost
+            </p>
             <div class="flex items-center space-x-4 p-0">
-            <button class ="button border border-white border-r-2">Download</button>
-            <button class ="button bg-cyan-50 text-black border border-black border-r-2">Learn more</button>
-          </div></div>
+              <button class="button border border-white border-r-2">
+                Download
+              </button>
+              <button
+                class="button bg-cyan-50 text-black border border-black border-r-2"
+              >
+                Learn more
+              </button>
+            </div>
+          </div>
           <div>
-          <figure class="object-cover">
-            <img src="assets/imgs/books.png"
-              alt="Lend your books and make friends"
-            ></a>
-          </figure>
-        </div>
-         <div>
-          <figure class="object-cover">
-            <img src="assets/imgs/book2.png"
-              alt="Lend your books and make friends"
-            ></a>
-          </figure>
-        </div>
-      </section>
-      <section class="container" id="toshare">
-        <h2>Everything you need to share</h2>
-        <p class="subheading">
-          Connect with readers in your area and start trading today.
-        </p>
-        <div class="container card-box">
-          <div class="card-box-sub1">
-            <div class="px-5 py-3">
-              <p>Share</p>
-              <h3>List your books in seconds</h3>
-              <p>
-                Upload photos and details. Your library goes live instantly.
-              </p>
-              <button class="btn">Explore</button>
-              <a class="a-toshare px-2" href="#"> Trade with real people > </a>
-            </div>
-            <div>
-              <img src="assets/imgs/books.jpg" />
-            </div>
+            <img
+              src="assets/imgs/image1.jpg"
+              alt=""
+              class="aspect-[.8] overflow-hidden object-cover object-center"
+            />
           </div>
-          <div class="card-box-sub2">
-            <article class="card-toshare">
-              <svg width="30" height="30" fill="black">
-                <use href="#globe_book"></use>
-              </svg>
-              <h4>
-                Browse what others are sharing. Find your next great read.
-              </h4>
-              <p>connect</p>
-              <a class="a-toshare" href="#"> Share > </a>
-            </article>
-            <article class="card-toshare">
-              <svg width="30" height="30" fill="black">
-                <use href="#explore"></use>
-              </svg>
-              <h4>Explore</h4>
-              <p>connect</p>
-              <a class="a-toshare" href="#"> Discover > </a>
-            </article>
-            <article class="card-toshare">
-              <svg width="30" height="30" fill="black">
-                <use href="#add_notes"></use>
-              </svg>
-              <h4>Post your books in one minute.</h4>
-              <p>Add photos, titles, and what you want. Done.</p>
-              <a class="a-toshare" href="#"> Browse > </a>
-            </article>
-            <article class="card-toshare">
-              <svg width="30" height="30" fill="black">
-                <use href="#navi"></use>
-              </svg>
-              <h4>Find books readers near you are offering.</h4>
-              <p>Search by genre, author, or what's trending locally.</p>
-              <a class="a-toshare" href="#"> Connect > </a>
-            </article>
+          <div>
+            <img src="assets/imgs/image2.jpg" alt="" class="object-cover" />
           </div>
         </div>
       </section>
-      <section class="container card-box">
-        <div class="p-4 w-full">
-          <h3>Most Read Book in the world of 2025</h3>
-          <p>
-            The most-read books of 2025 include Onyx Storm by Rebecca Yarros,
-            Sunrise on the Reaping by Suzanne Collins, and The Let Them Theory
-            by Mel Robbins, based on sales and user data from sources like
-            Circana and Goodreads.
+      <section id="toshare">
+        <div class="container">
+          <h2>Everything you need to share</h2>
+          <p class="subheading">
+            Connect with readers in your area and start trading today.
           </p>
-          <button class="btn">Detail</button>
-          <button class="btn">Book</button>
-        </div>
-        <div>
-          <img src="assets/imgs/top_books.png" />
-        </div>
-      </section>
-      <section class="container" id="testimonials">
-        <h2>Real readers</h2>
-        <p class="subheading">
-          Hear what people are saying about BookShare Connect.
-        </p>
-        <div class="flex flex-wrap lg:flex-nowrap gap-6">
-          <div class="card">
-            <div class="flex gap-0.5 mb-2">
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-            </div>
-            <p class="mb-5">
-              "I found three books I'd been searching for and made friends who
-              love the same authors. It's changed how I read."
-            </p>
-            <div class="flex">
-              <img
-                class="rounded-full w-20 mb-2"
-                src="assets/imgs/testimonial1.jpg"
-                alt=""
-              />
-              <div class="ml-4">
-                <div class="font-bold">Sarah Mitchell</div>
-                <div class="">Reader, Portland</div>
+          <div class="flex gap-3.5 flex-wrap lg:flex-nowrap">
+            <div class="border flex flex-col justify-between">
+              <div class="px-5 py-3 mb-5">
+                <p>Share</p>
+                <h3>List your books in seconds</h3>
+                <p>
+                  Upload photos and details. Your library goes live instantly.
+                </p>
+                <button class="btn">Explore</button>
+                <a class="a-toshare px-2" href="#">
+                  Trade with real people >
+                </a>
+              </div>
+              <div
+                class="aspect-[3] overflow-hidden object-cover object-center"
+              >
+                <img src="assets/imgs/books.jpg" />
               </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="flex gap-0.5 mb-2">
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-            </div>
-            <p class="mb-5">
-              "I traded five books last month and found two I'd been hunting for
-              years. The app made it simple, and the people were genuine."
-            </p>
-            <div class="flex">
-              <img
-                class="rounded-full w-20 mb-2"
-                src="assets/imgs/testimonial3.jpg"
-                alt=""
-              />
-              <div class="ml-4">
-                <div class="font-bold">Marcus Chen</div>
-                <div class="">Reader, Seattle</div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="flex gap-0.5 mb-2">
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-              <svg width="20" height="19" fill="gold">
-                <use href="#icon-star"></use>
-              </svg>
-            </div>
-            <p class="mb-5">
-              "No more books gathering dust. I list what I've finished, get what
-              I want next, and my wallet stays full. That's the deal."
-            </p>
-            <div class="flex">
-              <img
-                class="rounded-full w-20 mb-2"
-                src="assets/imgs/testimonial2.jpg"
-                alt=""
-              />
-              <div class="ml-4">
-                <div class="font-bold">Elena Rodriguez</div>
-                <div class="">Collector, Austin</div>
-              </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3.5">
+              <article class="card-toshare">
+                <svg width="30" height="30" fill="black">
+                  <use href="#globe_book"></use>
+                </svg>
+                <h4>
+                  Browse what others are sharing. Find your next great read.
+                </h4>
+                <p>connect</p>
+                <a class="a-toshare" href="#"> Share > </a>
+              </article>
+              <article class="card-toshare">
+                <svg width="30" height="30" fill="black">
+                  <use href="#explore"></use>
+                </svg>
+                <h4>Explore</h4>
+                <p>connect</p>
+                <a class="a-toshare" href="#"> Discover > </a>
+              </article>
+              <article class="card-toshare">
+                <svg width="30" height="30" fill="black">
+                  <use href="#add_notes"></use>
+                </svg>
+                <h4>Post your books in one minute.</h4>
+                <p>Add photos, titles, and what you want. Done.</p>
+                <a class="a-toshare" href="#"> Browse > </a>
+              </article>
+              <article class="card-toshare">
+                <svg width="30" height="30" fill="black">
+                  <use href="#navi"></use>
+                </svg>
+                <h4>Find books readers near you are offering.</h4>
+                <p>Search by genre, author, or what's trending locally.</p>
+                <a class="a-toshare" href="#"> Connect > </a>
+              </article>
             </div>
           </div>
         </div>
       </section>
-      <section class="container" id="pricing">
-        <h2>Pricing</h2>
-        <p class="subheading">
-          Choose what works for you and start sharing books today.
-        </p>
-        <div class="card-box-sub1">
-          <div class="card-pricing">
-            <div class="border-b">
-              <h3>Basic</h3>
-              <p>For causual readers</p>
+      <section id="cta1">
+        <div class="container flex gap-20">
+          <div class="p-4 w-full">
+            <h3>Most Read Book in the world of 2025</h3>
+            <p>
+              The most-read books of 2025 include Onyx Storm by Rebecca Yarros,
+              Sunrise on the Reaping by Suzanne Collins, and The Let Them Theory
+              by Mel Robbins, based on sales and user data from sources like
+              Circana and Goodreads.
+            </p>
+            <button class="btn">Detail</button>
+            <button class="btn">Book</button>
+          </div>
+          <div>
+            <img src="assets/imgs/top_books.png" />
+          </div>
+        </div>
+      </section>
+      <section id="testimonials">
+        <div class="container">
+          <h2>Real readers</h2>
+          <p class="subheading">
+            Hear what people are saying about BookShare Connect.
+          </p>
+          <div class="flex flex-wrap lg:flex-nowrap gap-5">
+            <div class="card">
+              <div class="flex gap-0.5 mb-2">
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+              </div>
+              <p class="mb-5">
+                "I found three books I'd been searching for and made friends who
+                love the same authors. It's changed how I read."
+              </p>
+              <div class="flex">
+                <img
+                  class="rounded-full w-20 mb-2"
+                  src="assets/imgs/testimonial1.jpg"
+                  alt=""
+                />
+                <div class="ml-4">
+                  <div class="font-bold">Sarah Mitchell</div>
+                  <div class="">Reader, Portland</div>
+                </div>
+              </div>
             </div>
-            <div class="pb-4 border-b">
-              <h3>Free</h3>
-              <p>Forever free</p>
-              <button class="btn w-full">Get started</button>
+            <div class="card">
+              <div class="flex gap-0.5 mb-2">
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+              </div>
+              <p class="mb-5">
+                "I traded five books last month and found two I'd been hunting
+                for years. The app made it simple, and the people were genuine."
+              </p>
+              <div class="flex">
+                <img
+                  class="rounded-full w-20 mb-2"
+                  src="assets/imgs/testimonial3.jpg"
+                  alt=""
+                />
+                <div class="ml-4">
+                  <div class="font-bold">Marcus Chen</div>
+                  <div class="">Reader, Seattle</div>
+                </div>
+              </div>
             </div>
-            <div class="pt-2">
-              <ul>
-                <li>List up to 10 books</li>
-                <li>Local trading only</li>
-                <li>Basic messaging</li>
-              </ul>
+            <div class="card">
+              <div class="flex gap-0.5 mb-2">
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+                <svg width="20" height="19" fill="gold">
+                  <use href="#icon-star"></use>
+                </svg>
+              </div>
+              <p class="mb-5">
+                "No more books gathering dust. I list what I've finished, get
+                what I want next, and my wallet stays full. That's the deal."
+              </p>
+              <div class="flex">
+                <img
+                  class="rounded-full w-20 mb-2"
+                  src="assets/imgs/testimonial2.jpg"
+                  alt=""
+                />
+                <div class="ml-4">
+                  <div class="font-bold">Elena Rodriguez</div>
+                  <div class="">Collector, Austin</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="card-pricing">
-            <div class="border-b">
-              <h3>Premium</h3>
-              <p>For serious collectors</p>
+        </div>
+      </section>
+      <section id="pricing">
+        <div class="container">
+          <h2>Pricing</h2>
+          <p class="subheading">
+            Choose what works for you and start sharing books today.
+          </p>
+          <div class="flex gap-3.5 flex-wrap">
+            <div class="card-pricing">
+              <div class="border-b">
+                <h3>Basic</h3>
+                <p>For causual readers</p>
+              </div>
+              <div class="pb-4 border-b">
+                <h3>Free</h3>
+                <p>Forever free</p>
+                <button class="btn w-full">Get started</button>
+              </div>
+              <div class="pt-2">
+                <ul>
+                  <li>List up to 10 books</li>
+                  <li>Local trading only</li>
+                  <li>Basic messaging</li>
+                </ul>
+              </div>
             </div>
-            <div class="pb-4 border-b">
-              <h3>9,99<span class="text-base">/month</span></h3>
-              <p>or 99/year</p>
-              <button class="btn w-full">Get started</button>
-            </div>
-            <div class="pt-2">
-              <ul>
-                <li>unlimited listings</li>
-                <li>Regional trading</li>
-                <li>Priority support</li>
-                <li>Reading analytics</li>
-                <li>Wishlist features</li>
-              </ul>
+            <div class="card-pricing">
+              <div class="border-b">
+                <h3>Premium</h3>
+                <p>For serious collectors</p>
+              </div>
+              <div class="pb-4 border-b">
+                <h3>9,99<span class="text-base">/month</span></h3>
+                <p>or 99/year</p>
+                <button class="btn w-full">Get started</button>
+              </div>
+              <div class="pt-2">
+                <ul>
+                  <li>unlimited listings</li>
+                  <li>Regional trading</li>
+                  <li>Priority support</li>
+                  <li>Reading analytics</li>
+                  <li>Wishlist features</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer>
-      <section class = "container">
-        <div class = "flex flex-row justify-between p-6">
+      <section class="container">
+        <div class="flex flex-row justify-between p-6">
           <aside>
-          <div>Logo</div>
+            <div class="w-40"><img src="assets/imgs/logo.jpg" alt="" /></div>
           </aside>
           <aside>
             <div>Product</div>
@@ -416,7 +416,7 @@
             <div>Company</div>
           </aside>
           <aside>
-          <div>About</div>
+            <div>About</div>
             <div>Blog</div>
             <div>Careers</div>
             <div>Contact</div>
@@ -424,19 +424,29 @@
             <div>Follow</div>
           </aside>
           <nav>
-          <div>Reach us @</div>
-          <div><img class = "inline-block w-6 h-6" src ="/assets/imgs/insta.webp"/><a href = "">Instagram</a></div>
-          <div><a href = "">Facebook</a></div>
-          <div><a href = "">LinkedIn</a></div>
-          <div><a href = "">YouTube</a></div>
-           <div><a href = "">© 2025 BookShare Connect. All rights</a></div>
+            <div>Reach us @</div>
+            <div>
+              <a href=""
+                ><img
+                  class="inline-block w-6 h-6"
+                  src="/assets/imgs/insta.webp"
+                />Instagram</a
+              >
+            </div>
+            <div>
+              <a href="">Facebook</a>
+            </div>
+            <div>
+              <a href="">LinkedIn</a>
+            </div>
+            <div>
+              <a href="">YouTube</a>
+            </div>
+            <div>
+              <a href="">© 2025 BookShare Connect. All rights</a>
+            </div>
           </nav>
-
-
-
-
-         
-          
+        </div>
       </section>
     </footer>
   </body>
