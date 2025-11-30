@@ -37,19 +37,16 @@
           @apply text-center font-semibold text-5xl mb-10;
         }
         h3 {
-          @apply text-2xl py-3;
+          @apply text-3xl py-3;
         }
         h4 {
-          @apply py-2 text-base;
+          @apply py-2 text-xl;
         }
         p {
           @apply pb-3;
         }
         body {
           @apply md:text-lg;
-        }
-        li {
-          @apply text-xs p-1 relative pl-6 before:content-['✓'] before:absolute before:left-0;
         }
       }
 
@@ -68,19 +65,32 @@
           @apply text-center mb-10 -mt-8 text-xl;
         }
         .card-box {
-          @apply flex flex-wrap md:flex-row lg:flex-nowrap items-center justify-center;
+          @apply flex flex-wrap gap-3 md:flex-row lg:flex-nowrap items-center justify-center;
         }
-        .card-box-sub {
-          @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 items-center justify-center p-4 gap-2.5;
+        .card-box-sub1 {
+          @apply w-full h-full flex flex-col gap-3 border-1;
+        }
+        .card-box-sub2 {
+          @apply w-full h-full gap-3.5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 items-center justify-center;
         }
         .card-toshare {
-          @apply items-center border-1 h-50 w-48 p-4;
+          @apply h-full w-full items-center border-1 p-4;
         }
-        .icon-toshare {
-          @apply w-6;
-        }
+
         .a-toshare {
-          @apply text-xs hover:bg-gray-300;
+          @apply text-base hover:text-gray-400;
+        }
+
+        #pricing li {
+          @apply text-lg p-1 relative pl-6 before:content-['✓'] before:absolute before:left-0;
+        }
+
+        .card-pricing {
+          @apply flex-1 flex-col border p-8;
+        }
+
+        #pricing .card-box-sub1 {
+          @apply md:flex-row border-none;
         }
         .button
         {
@@ -97,6 +107,26 @@
       <symbol id="icon-star">
         <path
           d="M9.07088 0.612343C9.41462 -0.204115 10.5854 -0.204114 10.9291 0.612346L12.9579 5.43123C13.1029 5.77543 13.4306 6.01061 13.8067 6.0404L19.0727 6.45748C19.9649 6.52814 20.3267 7.62813 19.6469 8.2034L15.6348 11.5987C15.3482 11.8412 15.223 12.2218 15.3106 12.5843L16.5363 17.661C16.744 18.5211 15.7969 19.201 15.033 18.7401L10.5245 16.0196C10.2025 15.8252 9.7975 15.8252 9.47548 16.0196L4.96699 18.7401C4.20311 19.201 3.25596 18.5211 3.46363 17.661L4.68942 12.5843C4.77698 12.2218 4.65182 11.8412 4.36526 11.5987L0.353062 8.2034C-0.326718 7.62813 0.0350679 6.52814 0.927291 6.45748L6.19336 6.0404C6.5695 6.01061 6.89716 5.77543 7.04207 5.43123L9.07088 0.612343Z"
+        />
+      </symbol>
+      <symbol id="globe_book" viewBox="0 -960 960 960">
+        <path
+          d="M123-440q-1-10-1.5-20t-.5-20q0-75 28-140.5t77-114q49-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480q0 10-.5 20t-1.5 20h-81q2-10 2.5-20t.5-20q0-10-.5-20t-2.5-20H639q1 10 1 20v40q0 10-1 20h-79v-33q0-12-.5-24t-1.5-23H403q-1 11-1.5 23t-.5 24v33h-79q-1-10-1-20v-40q0-10 1-20H204q-2 10-2.5 20t-.5 20q0 10 .5 20t2.5 20h-81Zm105-160h103q8-43 20-77.5t26-62.5q-48 18-87 54.5T228-600Zm186 0h132q-10-43-25-84t-41-76q-26 35-41.5 76T414-600Zm216 0h103q-23-49-62.5-85.5T583-740q14 30 26.5 63.5T630-600ZM440-120v-40q0-50-35-85t-85-35H80v-80h240q48 0 89.5 21t70.5 59q29-38 70.5-59t89.5-21h240v80H640q-50 0-85 35t-35 85v40h-80Z"
+        />
+      </symbol>
+      <symbol id="add_notes" viewBox="0 -960 960 960">
+        <path
+          d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v268q-19-9-39-15.5t-41-9.5v-243H200v560h242q3 22 9.5 42t15.5 38H200Zm0-120v40-560 243-3 280Zm80-40h163q3-21 9.5-41t14.5-39H280v80Zm0-160h244q32-30 71.5-50t84.5-27v-3H280v80Zm0-160h400v-80H280v80ZM720-40q-83 0-141.5-58.5T520-240q0-83 58.5-141.5T720-440q83 0 141.5 58.5T920-240q0 83-58.5 141.5T720-40Zm-20-80h40v-100h100v-40H740v-100h-40v100H600v40h100v100Z"
+        />
+      </symbol>
+      <symbol id="explore" viewBox="0 -960 960 960">
+        <path
+          d="m300-300 280-80 80-280-280 80-80 280Zm180-120q-25 0-42.5-17.5T420-480q0-25 17.5-42.5T480-540q25 0 42.5 17.5T540-480q0 25-17.5 42.5T480-420Zm0 340q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Zm0-320Z"
+        />
+      </symbol>
+      <symbol id="navi" viewBox="0 -960 960 960">
+        <path
+          d="m319-280 161-73 161 73 15-15-176-425-176 425 15 15ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
         />
       </symbol>
     </svg>
@@ -145,8 +175,8 @@
         <p class="subheading">
           Connect with readers in your area and start trading today.
         </p>
-        <div class="card-box">
-          <div class="flex flex-col gap-3 border-1">
+        <div class="container card-box">
+          <div class="card-box-sub1">
             <div class="px-5 py-3">
               <p>Share</p>
               <h3>List your books in seconds</h3>
@@ -157,12 +187,14 @@
               <a class="a-toshare px-2" href="#"> Trade with real people > </a>
             </div>
             <div>
-              <img src="assets/imgs/books.jpg" class="object-cover w-90" />
+              <img src="assets/imgs/books.jpg" />
             </div>
           </div>
-          <div class="card-box-sub">
+          <div class="card-box-sub2">
             <article class="card-toshare">
-              <img class="icon-toshare" src="assets/imgs/globe.png" />
+              <svg width="30" height="30" fill="black">
+                <use href="#globe_book"></use>
+              </svg>
               <h4>
                 Browse what others are sharing. Find your next great read.
               </h4>
@@ -170,19 +202,25 @@
               <a class="a-toshare" href="#"> Share > </a>
             </article>
             <article class="card-toshare">
-              <img class="icon-toshare" src="assets/imgs/compass.png" />
+              <svg width="30" height="30" fill="black">
+                <use href="#explore"></use>
+              </svg>
               <h4>Explore</h4>
               <p>connect</p>
               <a class="a-toshare" href="#"> Discover > </a>
             </article>
             <article class="card-toshare">
-              <img class="icon-toshare" src="assets/imgs/document.png" />
+              <svg width="30" height="30" fill="black">
+                <use href="#add_notes"></use>
+              </svg>
               <h4>Post your books in one minute.</h4>
               <p>Add photos, titles, and what you want. Done.</p>
               <a class="a-toshare" href="#"> Browse > </a>
             </article>
             <article class="card-toshare">
-              <img class="icon-toshare" src="assets/imgs/navigation.png" />
+              <svg width="30" height="30" fill="black">
+                <use href="#navi"></use>
+              </svg>
               <h4>Find books readers near you are offering.</h4>
               <p>Search by genre, author, or what's trending locally.</p>
               <a class="a-toshare" href="#"> Connect > </a>
@@ -191,7 +229,7 @@
         </div>
       </section>
       <section class="container card-box">
-        <div class="p-4">
+        <div class="p-4 w-full">
           <h3>Most Read Book in the world of 2025</h3>
           <p>
             The most-read books of 2025 include Onyx Storm by Rebecca Yarros,
@@ -317,23 +355,22 @@
         </div>
       </section>
       <section class="container" id="pricing">
-        <p class="text-center">Plans</p>
         <h2>Pricing</h2>
         <p class="subheading">
           Choose what works for you and start sharing books today.
         </p>
-        <div class="card-box gap-4">
-          <div class="flex flex-col border p-4 w-80 lg:max-w-full">
-            <div class="h-20 border-b">
+        <div class="card-box-sub1">
+          <div class="card-pricing">
+            <div class="border-b">
               <h3>Basic</h3>
               <p>For causual readers</p>
             </div>
-            <div class="h-35 border-b">
+            <div class="pb-4 border-b">
               <h3>Free</h3>
               <p>Forever free</p>
               <button class="btn w-full">Get started</button>
             </div>
-            <div class="h-30 pt-2">
+            <div class="pt-2">
               <ul>
                 <li>List up to 10 books</li>
                 <li>Local trading only</li>
@@ -341,17 +378,17 @@
               </ul>
             </div>
           </div>
-          <div class="flex flex-col border p-4 w-80">
-            <div class="h-20 border-b">
+          <div class="card-pricing">
+            <div class="border-b">
               <h3>Premium</h3>
               <p>For serious collectors</p>
             </div>
-            <div class="h-35 border-b">
+            <div class="pb-4 border-b">
               <h3>9,99<span class="text-base">/month</span></h3>
               <p>or 99/year</p>
               <button class="btn w-full">Get started</button>
             </div>
-            <div class="h-30 pt-2">
+            <div class="pt-2">
               <ul>
                 <li>unlimited listings</li>
                 <li>Regional trading</li>
