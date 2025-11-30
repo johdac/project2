@@ -34,7 +34,7 @@
       /* To set styling for default elements like <p>, <h1> etc. */
       @layer base {
         h2 {
-          @apply text-center font-thin text-5xl mb-10;
+          @apply text-center font-semibold text-5xl mb-10;
         }
         h3 {
           @apply text-2xl py-3;
@@ -82,6 +82,11 @@
         .a-toshare {
           @apply text-xs hover:bg-gray-300;
         }
+        .button
+        {
+          @apply flex flex-col justify-items-end items-center space-x-2 mt-4 px-2 py-2 text-center text-sm font-normal bg-black text-white cursor-pointer duration-200 ease-in-out hover:bg-indigo-700 focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95;
+        }
+        
       }
     </style>
     <title>Tailwind Group Project</title>
@@ -96,18 +101,45 @@
       </symbol>
     </svg>
     <header>
-      <div class="flex flex-row justify-between">
+      <div class="container flex flex-row justify-between">
         <div class="font-[Sofia] text-2xl text-red-300 mx-4">Logo</div>
         <nav>
-          <ul class="flex justify-around mx-4 cursor-pointer space-x-4">
-            <li><a href="">Explore</a></li>
-            <li><a href="">Community</a></li>
-            <li><a href="">Resources</a></li>
-          </ul>
+          <div class="flex justify-around mx-4 cursor-pointer space-x-4">
+            <div><a href="">Explore</a></div>
+            <div><a href="">Community</a></div>
+            <div><a href="">Resources</a></div>
+            </div>
         </nav>
       </div>
     </header>
     <main>
+      <section class="container flex flex-row p-6 gap-4">
+          <div class = "flex flex-col me-8">
+          <h2 class ="py-5 text-left text-wrap me-8">Share books,find readers, build community</h2>
+          <p class=" text-left text-wrap mt-60 ">
+            BookShare Connects brings readers together. Trade books with
+            neighbors, discover what others love, and grow your library without
+            the cost
+          </p>
+            <div class="flex items-center space-x-4 p-0">
+            <button class ="button border border-white border-r-2">Download</button>
+            <button class ="button bg-cyan-50 text-black border border-black border-r-2">Learn more</button>
+          </div></div>
+          <div>
+          <figure class="object-cover">
+            <img src="assets/imgs/books.png"
+              alt="Lend your books and make friends"
+            ></a>
+          </figure>
+        </div>
+         <div>
+          <figure class="object-cover">
+            <img src="assets/imgs/book2.png"
+              alt="Lend your books and make friends"
+            ></a>
+          </figure>
+        </div>
+      </section>
       <section class="container" id="toshare">
         <h2>Everything you need to share</h2>
         <p class="subheading">
@@ -332,6 +364,43 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <section class = "container">
+        <div class = "flex flex-row justify-between p-6">
+          <aside>
+          <div>Logo</div>
+          </aside>
+          <aside>
+            <div>Product</div>
+            <div>Features</div>
+            <div>Pricing</div>
+            <div>Security</div>
+            <div>Updates</div>
+            <div>Company</div>
+          </aside>
+          <aside>
+          <div>About</div>
+            <div>Blog</div>
+            <div>Careers</div>
+            <div>Contact</div>
+            <div>Support</div>
+            <div>Follow</div>
+          </aside>
+          <nav>
+          <div>Reach us @</div>
+          <div><img class = "inline-block w-6 h-6" src ="/assets/imgs/insta.webp"/><a href = "">Instagram</a></div>
+          <div><a href = "">Facebook</a></div>
+          <div><a href = "">LinkedIn</a></div>
+          <div><a href = "">YouTube</a></div>
+           <div><a href = "">© 2025 BookShare Connect. All rights</a></div>
+          </nav>
+
+
+
+
+         
+          
+      </section>
+    </footer>
   </body>
 </html>
