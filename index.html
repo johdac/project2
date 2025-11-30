@@ -47,6 +47,15 @@
         section {
           @apply mb-10 md:mb-25;
         }
+        details {
+          @apply mb-3;
+        }
+        summary {
+          @apply list-none font-semibold;
+        }
+        details > div {
+          @apply mt-3;
+        }
       }
 
       /* Components which apply multiple DEFINED tailwind classes */
@@ -131,7 +140,7 @@
               Share books, find readers, build a community
             </h2>
             <p class="text-left text-wrap mt-10">
-              BookShare Connects brings readers together. Trade books with
+              BookShare Connect brings readers together. Trade books with
               neighbors, discover what others love, and grow your library
               without the cost
             </p>
@@ -400,10 +409,57 @@
           </div>
         </div>
       </section>
+      <section>
+        <div class="container">
+          <h2>Questions</h2>
+          <div class="subheading">
+            Everything you need to know about BookShare Connect.
+          </div>
+          <details class="card w-full">
+            <summary>How do I list books?</summary>
+            <div>
+              Take photos of your books, add the title and author, and set your
+              asking price or trade preference. Your listing goes live
+              immediately and appears to readers in your area.
+            </div>
+          </details>
+          <details class="card w-full">
+            <summary>Is BookShare Connect really free?</summary>
+            <div>
+              Yes. Basic membership is free forever. You get ten listings and
+              can trade with neighbors. Premium membership unlocks unlimited
+              listings and regional trading for a small monthly fee.
+            </div>
+          </details>
+          <details class="card w-full">
+            <summary>How do trades actually work?</summary>
+            <div>
+              Message the other reader through the app to arrange pickup. Meet
+              in a public place, exchange books, and rate each other. It's that
+              simple. No shipping, no middleman.
+            </div>
+          </details>
+          <details class="card w-full">
+            <summary>What if someone doesn't show up?</summary>
+            <div>
+              Our community rating system helps keep things honest. If someone
+              cancels or doesn't show, you can report it. Repeat offenders lose
+              trading privileges.
+            </div>
+          </details>
+          <details class="card w-full">
+            <summary>Can I sell books instead of trading?</summary>
+            <div>
+              Yes. You can list books for trade, for sale, or both. Set your own
+              prices and decide what you want in return. The choice is yours.
+            </div>
+          </details>
+        </div>
+      </section>
     </main>
     <footer>
       <section class="container">
-        <div class="flex flex-row justify-between p-6">
+        <div class="flex flex-row justify-between">
           <aside>
             <div class="w-40"><img src="assets/imgs/logo.jpg" alt="" /></div>
           </aside>
