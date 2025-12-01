@@ -33,13 +33,13 @@
           @apply text-center font-semibold text-4xl md:text-5xl mb-10;
         }
         h3 {
-          @apply text-3xl py-3;
+          @apply text-3xl py-5 md:text-4xl;
         }
         h4 {
           @apply py-2 text-xl;
         }
         p {
-          @apply pb-3;
+          @apply pb-3 md:text-lg;
         }
         body {
           @apply md:text-lg;
@@ -150,13 +150,9 @@
               neighbors, discover what others love, and grow your library
               without the cost
             </p>
-            <div class="flex items-center space-x-4 p-0">
-              <button class="button border border-white border-r-2">
-                Download
-              </button>
-              <button
-                class="button whitespace-nowrap bg-cyan-50 text-black border border-black border-r-2"
-              >
+            <div class="flex items-center space-x-2 p-0">
+              <button>Download</button>
+              <button class="whitespace-nowrap bg-cyan-50 text-black border">
                 Learn more
               </button>
             </div>
@@ -198,7 +194,7 @@
                 <img src="assets/imgs/books.jpg" />
               </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3.5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <article class="card-toshare">
                 <svg width="30" height="30" fill="black">
                   <use href="#globe_book"></use>
@@ -238,7 +234,7 @@
         </div>
       </section>
       <section id="cta1">
-        <div class="container flex gap-20 flex-col lg:flex-row">
+        <div class="container flex gap-15 flex-col lg:flex-row">
           <div class="w-full">
             <h3>Most Read Book in the world of 2025</h3>
             <p>
@@ -247,11 +243,15 @@
               by Mel Robbins, based on sales and user data from sources like
               Circana and Goodreads.
             </p>
-            <button>Detail</button>
-            <button>Book</button>
+            <div class="flex items-center space-x-2 p-0">
+              <button class="whitespace-nowrap bg-cyan-50 text-black border">
+                Learn more
+              </button>
+              <button>Book</button>
+            </div>
           </div>
           <div>
-            <img src="assets/imgs/top_books.png" />
+            <img class="h-full w-auto" src="assets/imgs/top_books.png" />
           </div>
         </div>
       </section>
