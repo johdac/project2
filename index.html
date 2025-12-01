@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="[scroll-behavior:smooth]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -142,9 +142,9 @@
           <div class="w-40"><img src="assets/imgs/logo.jpg" alt="" /></div>
           <nav>
             <div class="flex justify-around mx-4 cursor-pointer space-x-4">
-              <div><a href="">Explore</a></div>
-              <div><a href="">Community</a></div>
-              <div><a href="">Resources</a></div>
+              <div><a href="#Exploresec">Explore</a></div>
+              <div><a href="#commsec">Community</a></div>
+              <div><a href="#Exploresec">Resources</a></div>
             </div>
           </nav>
         </div>
@@ -152,8 +152,8 @@
     </header>
     <main>
       <section id="hero">
-        <div class="container flex flex-row p-6 gap-4">
-          <div class="flex flex-col me-8">
+        <div class="container flex flex-col sm:flex-row p-6 gap-4">
+          <div>
             <h2 class="py-5 text-left text-wrap me-8">
               Share books, find readers, build a community
             </h2>
@@ -225,7 +225,7 @@
                 <svg width="30" height="30" fill="black">
                   <use href="#explore"></use>
                 </svg>
-                <h4>Explore</h4>
+                <h4 id="Exploresec">Explore</h4>
                 <p>connect</p>
                 <a class="a-toshare" href="#"> Discover > </a>
               </article>
@@ -428,7 +428,7 @@
         </div>
       </section>
       <section id="newsletter">
-        <div class="container">
+        <div id="commsec" class="container">
           <div class="flex lg:gap-30 border p-8 flex-wrap lg:flex-nowrap">
             <h2 class="text-left">Join the community today</h2>
             <div>
