@@ -137,8 +137,10 @@
       </symbol>
     </svg>
     <header>
-      <section id="header">
-        <div class="container flex flex-row justify-between">
+      <section id="header desktop">
+        <div class="container hidden md:flex md:flex-row md:justify-between">
+          <!-- (as tailwind applies its default design to mobile)hidden for small
+          screens till 768 px then it is visible from medium and large screens -->
           <div class="w-40"><img src="assets/imgs/logo.jpg" alt="" /></div>
           <nav>
             <div class="flex justify-around mx-4 cursor-pointer space-x-4">
@@ -147,6 +149,23 @@
               <div><a href="#Exploresec">Resources</a></div>
             </div>
           </nav>
+        </div>
+      </section>
+      <section id="header mob">
+        <div
+          class="container flex flex-row justify-between lg:hidden md:hidden"
+        >
+          <figure>
+            <img src="assets/imgs/burger-menu.svg" alt="mobile menu" />
+          </figure>
+          <nav class="hidden">
+            <div><a href="#Exploresec">Explore</a></div>
+            <div><a href="#commsec">Community</a></div>
+            <div><a href="#Exploresec">Resources</a></div>
+          </nav>
+          <div class="w-40">
+            <img src="assets/imgs/logo.jpg" alt="" />
+          </div>
         </div>
       </section>
     </header>
