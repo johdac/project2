@@ -33,13 +33,13 @@
           @apply text-center font-semibold text-4xl md:text-5xl mb-10;
         }
         h3 {
-          @apply text-3xl py-3;
+          @apply text-3xl py-5 md:text-4xl;
         }
         h4 {
           @apply py-2 text-xl;
         }
         p {
-          @apply pb-3;
+          @apply pb-3 md:text-lg;
         }
         body {
           @apply md:text-lg;
@@ -63,7 +63,6 @@
 
       /* Components which apply multiple DEFINED tailwind classes */
       @layer components {
-        .btn,
         button {
           @apply px-4 py-2 text-center text-sm font-semibold inline-block bg-emerald-600 text-white cursor-pointer uppercase transition duration-200 ease-in-out rounded-md hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95;
         }
@@ -87,9 +86,6 @@
         }
         .card-pricing {
           @apply flex-1 flex-col border p-8 basis-full md:basis-auto;
-        }
-        .button {
-          @apply flex flex-col justify-items-end items-center space-x-2 mt-4 px-2 py-2 text-center text-sm font-normal bg-black text-white cursor-pointer duration-200 ease-in-out hover:bg-indigo-700 focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95;
         }
         .chevron {
           @apply absolute top-0 -right-8;
@@ -154,13 +150,9 @@
               neighbors, discover what others love, and grow your library
               without the cost
             </p>
-            <div class="flex items-center space-x-4 p-0">
-              <button class="button border border-white border-r-2">
-                Download
-              </button>
-              <button
-                class="button bg-cyan-50 text-black border border-black border-r-2"
-              >
+            <div class="flex items-center space-x-2 p-0">
+              <button>Download</button>
+              <button class="whitespace-nowrap bg-cyan-50 text-black border">
                 Learn more
               </button>
             </div>
@@ -191,7 +183,7 @@
                 <p>
                   Upload photos and details. Your library goes live instantly.
                 </p>
-                <button class="btn">Explore</button>
+                <button>Explore</button>
                 <a class="a-toshare px-2" href="#">
                   Trade with real people >
                 </a>
@@ -202,7 +194,7 @@
                 <img src="assets/imgs/books.jpg" />
               </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3.5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <article class="card-toshare">
                 <svg width="30" height="30" fill="black">
                   <use href="#globe_book"></use>
@@ -242,7 +234,7 @@
         </div>
       </section>
       <section id="cta1">
-        <div class="container flex gap-20">
+        <div class="container flex gap-15 flex-col lg:flex-row">
           <div class="w-full">
             <h3>Most Read Book in the world of 2025</h3>
             <p>
@@ -251,11 +243,15 @@
               by Mel Robbins, based on sales and user data from sources like
               Circana and Goodreads.
             </p>
-            <button class="btn">Detail</button>
-            <button class="btn">Book</button>
+            <div class="flex items-center space-x-2 p-0">
+              <button class="whitespace-nowrap bg-cyan-50 text-black border">
+                Learn more
+              </button>
+              <button>Book</button>
+            </div>
           </div>
           <div>
-            <img src="assets/imgs/top_books.png" />
+            <img class="h-full w-auto" src="assets/imgs/top_books.png" />
           </div>
         </div>
       </section>
@@ -386,7 +382,7 @@
               <div class="pb-4 border-b">
                 <h3>Free</h3>
                 <p>Forever free</p>
-                <button class="btn w-full">Get started</button>
+                <button class="w-full">Get started</button>
               </div>
               <div class="pt-2">
                 <ul>
@@ -404,7 +400,7 @@
               <div class="pb-4 border-b">
                 <h3>9,99<span class="text-base">/month</span></h3>
                 <p>or 99/year</p>
-                <button class="btn w-full">Get started</button>
+                <button class="w-full">Get started</button>
               </div>
               <div class="pt-2">
                 <ul>
