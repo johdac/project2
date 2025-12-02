@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="[scroll-behavior:smooth]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -90,6 +90,12 @@
         .chevron {
           @apply absolute top-0 -right-8;
         }
+        .fnavs {
+          @apply flex gap-1;
+        }
+        .img {
+          @apply inline-block w-6 h-6;
+        }
       }
     </style>
     <title>Tailwind Group Project</title>
@@ -127,21 +133,42 @@
       </symbol>
     </svg>
     <header>
-      <div class="container flex flex-row justify-between">
-        <div class="w-40"><img src="assets/imgs/logo.jpg" alt="" /></div>
-        <nav>
-          <div class="flex justify-around mx-4 cursor-pointer space-x-4">
-            <div><a href="">Explore</a></div>
-            <div><a href="">Community</a></div>
-            <div><a href="">Resources</a></div>
+      <section id="header desktop">
+        <div class="container hidden md:flex md:flex-row md:justify-between">
+          <!-- (as tailwind applies its default design to mobile)hidden for small
+          screens till 768 px then it is visible from medium and large screens -->
+          <div class="w-40"><img src="assets/imgs/logo.jpg" alt="" /></div>
+          <nav>
+            <div class="flex justify-around mx-4 cursor-pointer space-x-4">
+              <div><a href="#Exploresec">Explore</a></div>
+              <div><a href="#commsec">Community</a></div>
+              <div><a href="#Exploresec">Resources</a></div>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section id="header mob">
+        <div
+          class="container flex flex-row justify-between lg:hidden md:hidden"
+        >
+          <figure>
+            <img src="assets/imgs/burger-menu.svg" alt="mobile menu" />
+          </figure>
+          <nav class="hidden">
+            <div><a href="#Exploresec">Explore</a></div>
+            <div><a href="#commsec">Community</a></div>
+            <div><a href="#Exploresec">Resources</a></div>
+          </nav>
+          <div class="w-40">
+            <img src="assets/imgs/logo.jpg" alt="" />
           </div>
-        </nav>
-      </div>
+        </div>
+      </section>
     </header>
     <main>
       <section id="hero">
-        <div class="container flex flex-row p-6 gap-4">
-          <div class="flex flex-col me-8">
+        <div class="container flex flex-col sm:flex-row p-6 gap-4">
+          <div>
             <h2 class="py-5 text-left text-wrap me-8">
               Share books, find readers, build a community
             </h2>
@@ -209,7 +236,7 @@
                 <svg width="30" height="30" fill="black">
                   <use href="#explore"></use>
                 </svg>
-                <h4>Explore</h4>
+                <h4 id="Exploresec">Explore</h4>
                 <p>connect</p>
                 <a class="a-toshare" href="#"> Discover > </a>
               </article>
@@ -416,7 +443,7 @@
         </div>
       </section>
       <section id="newsletter">
-        <div class="container">
+        <div id="commsec" class="container">
           <div class="flex lg:gap-30 border p-8 flex-wrap lg:flex-nowrap">
             <h2 class="text-left">Join the community today</h2>
             <div>
@@ -515,48 +542,63 @@
       </section>
     </main>
     <footer>
-      <section class="container">
-        <div class="flex flex-row justify-between">
+      <section id="footer">
+        <div
+          class="container flex flex-col sm:flex-row sm:flex-wrap justify-between gap-8 w-full"
+        >
           <aside>
-            <div class="w-40"><img src="assets/imgs/logo.jpg" alt="" /></div>
+            <div class="w-40 flex-shrink-0">
+              <img src="assets/imgs/logo.jpg" alt="" />
+            </div>
           </aside>
-          <aside>
-            <div>Product</div>
+          <aside class="flex-1 flex flex-col gap-2 sm:flex-wrap min-w-[120px]">
+            <div class="font-bold">Product</div>
             <div>Features</div>
             <div>Pricing</div>
-            <div>Security</div>
             <div>Updates</div>
             <div>Company</div>
           </aside>
-          <aside>
-            <div>About</div>
+          <aside class="flex-1 flex flex-col gap-2 sm:flex-wrap min-w-[120px]">
+            <div class="font-bold">About</div>
             <div>Blog</div>
-            <div>Careers</div>
             <div>Contact</div>
             <div>Support</div>
             <div>Follow</div>
           </aside>
-          <nav>
-            <div>Reach us @</div>
+          <nav class="flex-1 flex flex-col gap-2 sm:flex-wrap min-w-[150px]">
+            <div class="font-bold">Reach us @</div>
             <div>
-              <a href=""
-                ><img
-                  class="inline-block w-6 h-6"
-                  src="/assets/imgs/insta.webp"
-                />Instagram</a
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="flex gap-1 hover:underline"
+              >
+                <img class="img" src="/assets/imgs/insta.webp" />Instagram</a
               >
             </div>
             <div>
-              <a href="">Facebook</a>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="flex gap-1 hover:underline"
+                ><img class="img" src="/assets/imgs/facebook.png" />Facebook</a
+              >
             </div>
             <div>
-              <a href="">LinkedIn</a>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                class="flex gap-1 hover:underline"
+                ><img class="img" src="/assets/imgs/Linkedin.png" />LinkedIn</a
+              >
             </div>
-            <div>
-              <a href="">YouTube</a>
-            </div>
-            <div>
-              <a href="">© 2025 BookShare Connect. All rights</a>
+            <div class>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                class="flex gap-1 hover:underline"
+                ><img class="img" src="/assets/imgs/youtube.svg" />YouTube</a
+              >
             </div>
           </nav>
         </div>
